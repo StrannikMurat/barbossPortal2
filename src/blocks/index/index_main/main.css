@@ -1,0 +1,12 @@
+@import url('./__main_button/main_button.css');
+
+.main__button_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main {
+    margin-top: auto;
+}

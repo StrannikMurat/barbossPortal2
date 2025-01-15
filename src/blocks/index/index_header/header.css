@@ -1,0 +1,19 @@
+@import url('./__logo/header__logo.css');
+@import url('./__header__title_line/header__title_line.css');
+@import url('./__header__subtitle/header__subtitle.css');
+@import url('./__header__title_wrapper/header__title_wrapper.css');
+
+.header {
+    display: flex;
+    gap: 15px;
+    margin: 0 auto;
+    padding-left: 15px;
+    width: 95%;
+    max-height: 80px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.68);
+    border: 1px solid #363636;
+    border-left: 10px solid #363636;
+    border-right: 10px solid #363636;
+}

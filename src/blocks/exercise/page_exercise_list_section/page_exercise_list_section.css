@@ -1,0 +1,12 @@
+@import url('./__page_exercise__places__item/page_exercise__places__item.css');
+@import url('./__page_exercise__exercise_list_section__list/page_exercise__exercise_list_section__list.css');
+@import url('./__page_exercise_section_description__image_wrapper/page_exercise_section_description__image_wrapper.css');
+@import url('./__page_exercise_section_description__wrapper/page_exercise_section_description__wrapper.css');
+@import url('./__page_exercise_section_description__title/page_exercise_section_description__title.css');
+@import url('./__page_exercise_section_description__paragraph/page_exercise_section_description__paragraph.css');
+@import url('./__page_exercise_section__description_button/page_exercise_section__description_button.css');
+
+.page_exercise_list_secrion {
+    display: flex;
+    /* overflow: hidden; */
+}

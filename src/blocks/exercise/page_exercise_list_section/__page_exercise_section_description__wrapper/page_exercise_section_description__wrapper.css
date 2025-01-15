@@ -1,0 +1,17 @@
+.page_exercise_section_description__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 72%;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.page_exercise_section_description__line {
+    height: 2px;
+    background-color: #cccccc;
+    width: 90%;
+    margin-left: 10%;
+}
+
+
+

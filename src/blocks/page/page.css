@@ -1,0 +1,15 @@
+.page__content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 430px;
+    height: 730px;
+    background-image: url('/src/img/background/background pattern.png');
+    box-sizing: border-box;
+    padding: 0.5% 0 0;
+}
+
+.exercise__page_content {
+    gap: 15px;
+}
+

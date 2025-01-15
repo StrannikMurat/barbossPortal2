@@ -1,0 +1,7 @@
+@import url('./__page__exercise_search_input/page__exercise_search_input.css');
+
+.page__exercise_search {
+    display: flex;
+    margin: 0 auto;
+    width: 85%;
+}

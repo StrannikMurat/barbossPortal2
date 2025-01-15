@@ -1,0 +1,13 @@
+@import url('/src/normalize/normalize.css');
+@import url('/src/blocks/index/index_main/main.css');
+@import url('/src/blocks/index/index_header/header.css');
+@import url('../blocks/page/page.css');
+@import url('../blocks/exercise/page__exercise_header/page__exercise_header.css');
+@import url('../blocks/exercise/page__exercise_search/page__exercise_search.css');
+@import url('../blocks/exercise/page__exercise_level/page__exercise_level.css');
+@import url('../blocks/exercise/page__exercise_variants/page__exercise_variants.css');
+@import url('../blocks/exercise/page_exercise_list_section/page_exercise_list_section.css');
+
+
+
+

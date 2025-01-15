@@ -1,0 +1,11 @@
+@import url('./__page__exercise_header_button/page__exercise_header_button.css');
+@import url('./__page__exercise_header_title_wrapper/page__exercise_header_title_wrapper.css');
+@import url('./__page__exercise_header_title/page__exercise_header_title.css');
+@import url('./__page__exercise_header_subtitle/page__exercise_header_subtitle.css');
+@import url('./__page__exercise_header_title_line/page__exercise_header_title_line.css');
+
+.page__exercise_header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1% 2%;
+}

@@ -1,0 +1,17 @@
+.page_exercise_section_description__title {
+    background: linear-gradient(90deg, rgba(51, 51, 51, 1) 0%, rgba(51, 51, 51, 1) 86%, rgba(51, 51, 51, 0.6559873949579832) 93%, rgba(51, 51, 51, 0) 100%);
+    color: #f4f4f4;
+    font-size: 16px;
+    font-weight: 500;
+    width: 95%;
+    margin-top: 5%;
+    border-left: 10px solid transparent;
+    padding-left: 5px;
+}
+
+.page_xercise_section_description__subtitle {
+    color: #363636;
+    margin-left: 10%;
+    font-size: 16px;
+    font-weight: 500;
+}

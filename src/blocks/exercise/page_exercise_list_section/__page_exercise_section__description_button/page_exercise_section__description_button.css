@@ -1,0 +1,14 @@
+.page_exercise_section__description_button {
+    text-align: end;
+    font-size: 17px;
+    border-left: 8px solid #333333;
+    color: #fff;
+    background-color: #333;
+    border-radius: 0 8px 0 8px;
+    width: 43%;
+    padding: 5px 10px 5px 5px;
+}
+
+.page_exercise_section__description_button:active {
+    transform: scale(97%);
+}

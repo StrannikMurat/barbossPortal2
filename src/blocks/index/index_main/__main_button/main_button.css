@@ -1,0 +1,21 @@
+.main__button_item {
+    width: 164px;
+    height: 164px;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.68);
+    border-radius: 15px;
+    border-left: 20px solid #363636;
+    cursor: pointer;
+}
+
+.main__button_item:hover {
+    border-left: 20px solid #ffbd16;
+}
+
+.main__button {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}

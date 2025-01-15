@@ -1,0 +1,11 @@
+.page_exercise__exercise_list_section__list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-width: 380px;
+    max-height: 460px;
+    margin: 0 auto;
+    padding: 2%;
+    gap: 15px;
+}
