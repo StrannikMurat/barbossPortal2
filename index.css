@@ -6,7 +6,7 @@
 .header__subtitle{font-size:14px;text-align:end;width:90%}
 .header__title_wrapper{width:100%}
 .header{background-color:#f5f5f5;border-left:1px solid #363636;border-right:1px solid #363636;border-color:#363636;border-style:solid;border-width:1px 10px;box-shadow:0 0 5px 0 rgba(0,0,0,.68);box-sizing:border-box;display:flex;gap:15px;margin:0 auto;max-height:80px;padding-left:15px;width:95%}
-.page__content{background-image:url(5f4c634297f36d61890b.png);box-sizing:border-box;display:flex;flex-direction:column;height:730px;margin:0 auto;max-width:430px;padding:.5% 0 2%}.exercise__page_content{gap:15px}
+.page__content{background-image:url(5f4c634297f36d61890b.png);box-sizing:border-box;display:flex;flex-direction:column;height:730px;margin:0 auto;max-width:430px;padding:.5% 0 2%}.exercise__page_content{gap:15px}@media (max-width:450px){.index__page_content{padding-bottom:14%}}
 .page__exercise_header_button{background-color:#f5f5f5;border-left:13px solid #363636;border-radius:10px;box-shadow:0 0 5px 0 rgba(0,0,0,.68);color:#363636;font-size:29px;font-weight:500;width:30%}.page__exercise_header_button:hover{border-left:13px solid #ffbd16}
 .page__exercise_header_title_wrapper{border-left:1px solid #363636;border-right:1px solid #363636;border-color:#363636;border-style:solid;border-width:1px 10px;box-shadow:0 0 5px 0 rgba(0,0,0,.68);display:flex;flex-direction:column;width:60%}
 .page__exercise_header_title{font-size:22px;font-weight:500;padding-inline-end:10px;text-align:end}
