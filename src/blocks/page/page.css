@@ -6,7 +6,7 @@
     height: 730px;
     background-image: url('/src/img/background/background pattern.png');
     box-sizing: border-box;
-    padding: 0.5% 0 0;
+    padding: 0.5% 0 5%;
 }
 
 .exercise__page_content {

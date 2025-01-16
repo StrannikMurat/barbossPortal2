@@ -29,6 +29,27 @@ search.addEventListener('keyup', function() {
     });
 });
 
+// Функция выбора карточек по уровню сложности
+function renderCardsByDifficulty(difficulty) {
+    // Очистка текущего списка карточек
+    placeList.innerHTML = '';
+
+    // Фильтрация initialCards по выбранной сложности
+    const filteredCards = initialCards.filter(card => card.difficult === difficulty);
+
+    // Отображение отфильтрованных карточек
+    filteredCards.forEach(function(item) {
+        placeList.append(createCardElement(item));
+    });
+}
+
+// Добавление обработчиков событий к кнопкам сложности
+document.querySelectorAll('.page__exercise_level__button').forEach(button => {
+    button.addEventListener('click', function() {
+        const difficulty = this.getAttribute('data-difficulty'); // Получаем значение атрибута
+        renderCardsByDifficulty(difficulty); // Передаем уровень сложности в функцию отрисовки
+    });
+});
 
 
 
