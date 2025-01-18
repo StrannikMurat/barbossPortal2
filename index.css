@@ -15,7 +15,7 @@
 .page__exercise_header{display:flex;justify-content:space-around;padding:1% 2%}
 .page__exercise_search_input{border:2px solid rgba(6,5,5,.5);border-radius:5px;box-shadow:0 2px 4px rgba(0,0,0,.1);color:#363636;font-size:15px;padding:5px 0;text-align:center;width:100%}
 .page__exercise_search{display:flex;margin:0 auto;width:85%}
-.page__exercise_level__item{background-color:#fff;border-left:8px solid #363636;border-radius:5px;box-shadow:0 0 5px 0 rgba(0,0,0,.68);cursor:pointer;padding:5px}.page__exercise_level__item-active{border-left:8px solid #ffbd16;transform:scale(95%)}.page__exercise_level__item:hover{border-left:8px solid #ffbd16}.page__exercise_level__item:active{transform:scale(90%)}.page__exercise_level__button{color:#525252;font-size:15px;font-weight:700}
+.page__exercise_level__item{background-color:#fff;border-left:8px solid #363636;border-radius:5px;box-shadow:0 0 5px 0 rgba(0,0,0,.68);cursor:pointer;padding:5px}.page__exercise_level__item-active{border-left:8px solid #ffbd16;transform:scale(90%)}.page__exercise_level__item:hover{border-left:8px solid #ffbd16}.page__exercise_level__item:active{transform:scale(90%)}.page__exercise_level__button{color:#525252;font-size:15px;font-weight:700}
 .page__exercise_level__list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 
 .page__exercise_variants__list{display:flex;flex-wrap:wrap;gap:15px;justify-content:center}.page__exercise_variants__button{background-color:#333;border-left:6px solid #363636;color:#f4f4f4;cursor:pointer;font-size:15px;font-weight:500;padding:5px 16px 6px}
