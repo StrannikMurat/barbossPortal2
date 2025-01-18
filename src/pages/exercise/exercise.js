@@ -1,12 +1,15 @@
 import "../../styles/index.css";
 import { initialCards } from "../../scripts/dataObjects/Cards";
 import { createCardElement } from "../../scripts/index/Card";
+import { renderCardsByDifficulty } from "../../scripts/CardsDifficulty";
+
+let currentDifficulty = null; // Переменная текущей сложности
+let activeButton = null; // Переменная для хранения активной кнопки
 
 // DOM элемент для вывода карточек
-const placeList = document.querySelector('.page_exercise__exercise_list_section__list');
-
+export const placeList = document.querySelector('.page_exercise__exercise_list_section__list');
 //DOM элемент для поиска определённых упражнний
-const search = document.querySelector('.page__exercise_search_input');
+export const search = document.querySelector('.page__exercise_search_input');
 
 
 // Функция обработчик для перехода на страницу index
@@ -29,27 +32,35 @@ search.addEventListener('keyup', function() {
     });
 });
 
-// Функция выбора карточек по уровню сложности
-function renderCardsByDifficulty(difficulty) {
-    // Очистка текущего списка карточек
-    placeList.innerHTML = '';
-
-    // Фильтрация initialCards по выбранной сложности
-    const filteredCards = initialCards.filter(card => card.difficult === difficulty);
-
-    // Отображение отфильтрованных карточек
-    filteredCards.forEach(function(item) {
-        placeList.append(createCardElement(item));
-    });
-}
-
 // Добавление обработчиков событий к кнопкам сложности
-document.querySelectorAll('.page__exercise_level__button').forEach(button => {
+document.querySelectorAll('.page__exercise_level__item').forEach(button => {
     button.addEventListener('click', function() {
-        const difficulty = this.getAttribute('data-difficulty'); // Получаем значение атрибута
-        renderCardsByDifficulty(difficulty); // Передаем уровень сложности в функцию отрисовки
+        const difficulty = button.getAttribute('data-difficulty');
+
+        // Проверка, совпадает ли текущая сложность с выбранной
+        if (currentDifficulty === difficulty) {
+            // Если совпадает, сбросить фильтр
+            currentDifficulty = null;
+            // Показать начальный список
+            placeList.innerHTML = '';
+            initialCards.forEach(function(item) {
+                placeList.append(createCardElement(item));
+            });
+            button.classList.remove('page__exercise_level__item-active');
+            activeButton = null; // Сбрасываем активную кнопку
+        } else {
+             // Если есть активная кнопка, сбросить её стиль
+             if (activeButton) {
+                activeButton.classList.remove('page__exercise_level__item-active');
+            }
+            currentDifficulty = difficulty;
+            renderCardsByDifficulty(difficulty);
+            button.classList.add('page__exercise_level__item-active');
+            activeButton = button; // Сохраняем ссылку на активную кнопку
+        }
     });
 });
+
 
 
 
