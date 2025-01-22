@@ -5,8 +5,8 @@ import { renderCardsByDifficulty } from "../../scripts/index/CardsDifficulty";
 import { renderCardByVariants } from "../../scripts/index/cardVariants";
 
 
-let currentDifficulty = null; // Переменная текущей сложности
-let activeButton = null; // Переменная для хранения активной кнопки
+export let currentDifficulty = null; // Переменная текущей сложности
+export let activeButton = null; // Переменная для хранения активной кнопки
 
 // DOM элемент для вывода карточек
 export const placeList = document.querySelector(
@@ -66,32 +66,21 @@ document.querySelectorAll(".page__exercise_level__item").forEach((button) => {
   });
 });
 
-let carrentVariant = null;
+export let currentVariant = null;
 
 document.querySelectorAll(".page__exercise_variants__item").forEach((button) => {
   button.addEventListener('click', function() {
     const selectedVariant = button.getAttribute("data-variants");
 
-    if(carrentVariant === selectedVariant) {
-      carrentVariant = null;
-      placeList.innerHTML = "";
-      initialCards.forEach(function (item) {
-        placeList.append(createCardElement(item));
-      });
+    if(currentVariant === selectedVariant) {
+      currentVariant = null;
+      renderCardByVariants();
     } else {
-      carrentVariant = selectedVariant;
-
-       // Если выбрана сложность, отобразить карточки по обеим критериям
-       if (currentDifficulty) {
-        renderCardByVariants(selectedVariant, currentDifficulty);
-      } else {
-        renderCardByVariants(selectedVariant);
-      }
-      // renderCardByVariants(selectedVariant);
+      currentVariant = selectedVariant;
+      renderCardByVariants();
     }
   })
 })
-
 
 // выводим карточки на страницу
 initialCards.forEach(function (item) {
