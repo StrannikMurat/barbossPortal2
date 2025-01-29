@@ -9,4 +9,3 @@ document.querySelector('.main__button_trane').addEventListener('click', function
 
 
 
-

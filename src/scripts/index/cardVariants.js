@@ -31,3 +31,4 @@ export const renderCardByVariants = () => {
     placeList.append(noCardsMessage);
   }
 };
+

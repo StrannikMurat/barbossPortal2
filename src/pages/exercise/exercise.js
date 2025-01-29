@@ -1,9 +1,7 @@
 import "../../styles/index.css";
 import { initialCards } from "../../scripts/dataObjects/Cards";
 import { createCardElement } from "../../scripts/index/Card";
-import { renderCardsByDifficulty } from "../../scripts/index/CardsDifficulty";
 import { renderCardByVariants } from "../../scripts/index/cardVariants";
-
 
 export let currentDifficulty = null; // Переменная текущей сложности
 export let activeButton = null; // Переменная для хранения активной кнопки
@@ -48,9 +46,7 @@ document.querySelectorAll(".page__exercise_level__item").forEach((button) => {
       currentDifficulty = null;
       // Показать начальный список
       placeList.innerHTML = "";
-      initialCards.forEach(function (item) {
-        placeList.append(createCardElement(item));
-      });
+      renderCardByVariants();
       button.classList.remove("page__exercise_level__item-active");
       activeButton = null; // Сбрасываем активную кнопку
     } else {
@@ -59,7 +55,7 @@ document.querySelectorAll(".page__exercise_level__item").forEach((button) => {
         activeButton.classList.remove("page__exercise_level__item-active");
       }
       currentDifficulty = difficulty;
-      renderCardsByDifficulty(difficulty);
+      renderCardByVariants();
       button.classList.add("page__exercise_level__item-active");
       activeButton = button; // Сохраняем ссылку на активную кнопку
     }
@@ -81,6 +77,7 @@ document.querySelectorAll(".page__exercise_variants__item").forEach((button) => 
     }
   })
 })
+
 
 // выводим карточки на страницу
 initialCards.forEach(function (item) {
