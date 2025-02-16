@@ -1,0 +1,12 @@
+.popup__svg-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__svg {
+    background: url('/src/img/muscles/musclesMapScale.svg') no-repeat center center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}

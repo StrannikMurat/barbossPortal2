@@ -1,0 +1,31 @@
+@import url('./__popup__info-img/popup__info-img.css');
+@import url('./__popup__svg/popup__svg.css');
+@import url('./__popup__main_title/popup__main_title.css');
+@import url('./__popup__info_wrapper/popup__info_wrapper.css');
+
+.popup {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.popup__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url('/src/img/background/background pattern.png');
+    max-width: 470px;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+
+}
+
+

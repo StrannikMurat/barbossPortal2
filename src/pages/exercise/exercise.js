@@ -64,22 +64,65 @@ document.querySelectorAll(".page__exercise_level__item").forEach((button) => {
 
 export let currentVariant = null;
 
-document.querySelectorAll(".page__exercise_variants__item").forEach((button) => {
-  button.addEventListener('click', function() {
-    const selectedVariant = button.getAttribute("data-variants");
+document
+  .querySelectorAll(".page__exercise_variants__item")
+  .forEach((button) => {
+    button.addEventListener("click", function () {
+      const selectedVariant = button.getAttribute("data-variants");
 
-    if(currentVariant === selectedVariant) {
-      currentVariant = null;
-      renderCardByVariants();
-    } else {
-      currentVariant = selectedVariant;
-      renderCardByVariants();
-    }
-  })
-})
+      if (currentVariant === selectedVariant) {
+        currentVariant = null;
+        renderCardByVariants();
+      } else {
+        currentVariant = selectedVariant;
+        renderCardByVariants();
+      }
+    });
+  });
 
+import { closePopup } from "../../scripts/index/modal";
+import { openPopup } from "../../scripts/index/modal";
+
+const popup = document.querySelector(".popup");
+const popupClose = popup.querySelector(".popup__back");
+const popupTitle = popup.querySelector(".popup__main_title");
+const popupTypeExercise = popup.querySelector(".popup__type-exercise");
+const popupTypeDifficult = popup.querySelector(".popup__type-difficult");
+const popupTypeEquipment = popup.querySelector('.popup__type-equipment');
+const popupFooterList = popup.querySelector('.popup__footer_list');
+const musclelsMaster = popup.querySelector('.popup__exercise_muscle');
+const popupMusclelsSlave = popup.querySelector('.popup__musclels-slave');
+const popupInfoImg = popup.querySelector('.popup__info-img');
+
+export function openCardPopup(img, mainTitle, exercise, difficult, equipment, about, master, slave) {
+  openPopup(popup);
+
+  popupInfoImg.src = img.src;
+  popupTitle.textContent = mainTitle.textContent;
+  popupTypeExercise.textContent = exercise.textContent;
+  popupTypeDifficult.textContent = difficult.textContent;
+  popupTypeEquipment.textContent = equipment;
+  popupFooterList.innerHTML = about.split('\n').map(line => `<p class="popup__footer_item">${line}</p>`).join(''); 
+  musclelsMaster.innerHTML = master
+  .split(',') // Разделяем строку по запятым
+  .map(line => line.trim()) // Удаляем лишние пробелы вокруг каждого элемента
+  .filter(line => line !== '') // Убираем пустые строки (если они есть)
+  .map(line => `<li class="popup__musclels-master popup__musclels-item">${line}</li>`) // Оборачиваем каждый элемент в <li>
+  .join(''); // Склеиваем всё в одну строку без разделителей
+  
+  popupMusclelsSlave.innerHTML = slave
+  .split(',') 
+  .map(line => line.trim())
+  .filter(line => line !== '') 
+  .map(line => `<li class="popup__musclels-slavee popup__musclels-item">${line}</li>`) 
+  .join(''); 
+}
+
+popupClose.addEventListener("click", function () {
+  closePopup(popup);
+});
 
 // выводим карточки на страницу
 initialCards.forEach(function (item) {
-  placeList.append(createCardElement(item));
+  placeList.append(createCardElement(item, openCardPopup));
 });

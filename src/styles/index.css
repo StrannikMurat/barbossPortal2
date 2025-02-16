@@ -7,6 +7,10 @@
 @import url('../blocks/exercise/page__exercise_level/page__exercise_level.css');
 @import url('../blocks/exercise/page__exercise_variants/page__exercise_variants.css');
 @import url('../blocks/exercise/page_exercise_list_section/page_exercise_list_section.css');
+@import url('/src/blocks/exercise/popup/popup.css');
+@import url('/src/blocks/exercise/popup/__popup_is-animated/popup_is-animated.css');
+@import url('/src/blocks/exercise/popup/__popup_is-opened/popup_is-opened.css');
+
 
 
 
