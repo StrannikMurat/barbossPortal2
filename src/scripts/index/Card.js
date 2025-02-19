@@ -30,18 +30,18 @@ export function createCardElement(cardDate, openCardPopup) {
   elementSubtitle.textContent = cardDate.subTitle;
   elementDescription.textContent = cardDate.difficult;
 
-  elementBtn.addEventListener("click", () => {
-    openCardPopup(
-      elementImage,
-      elementTitle,
-      elementSubtitle,
-      elementDescription,
-      cardDate.equipment,
-      cardDate.about,
-      cardDate.musclelsMaster,
-      cardDate.musclelsSlave,
-    );
-  });
+  // elementBtn.addEventListener("click", () => {
+  //   openCardPopup(
+  //     elementImage,
+  //     elementTitle,
+  //     elementSubtitle,
+  //     elementDescription,
+  //     cardDate.equipment,
+  //     cardDate.about,
+  //     cardDate.musclelsMaster,
+  //     cardDate.musclelsSlave,
+  //   );
+  // });
 
   return cardElement;
 }
