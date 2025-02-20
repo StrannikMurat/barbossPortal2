@@ -14,4 +14,7 @@
 
 
 
-
+.no-active {
+    filter: blur(5px);
+    pointer-events:stroke;
+}

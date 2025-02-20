@@ -101,47 +101,51 @@ export function openCardPopup(img, mainTitle, exercise, difficult, equipment, ab
   popupTitle.textContent = mainTitle.textContent;
   popupTypeExercise.textContent = exercise.textContent;
   popupTypeDifficult.textContent = difficult.textContent;
-  popupTypeEquipment.textContent = equipment ? equipment : 'no information';
-  popupFooterList.innerHTML = about ? about.split('\n').map(line => `<p class="popup__footer_item">${line}</p>`).join('') : 'no information'; 
+  popupTypeEquipment.textContent = equipment ? equipment : '';
+  popupFooterList.innerHTML = about ? about.split('\n').map(line => `<p class="popup__footer_item">${line}</p>`).join('') : ''; 
   musclelsMaster.innerHTML = master ? master
   .split(',') // Разделяем строку по запятым
   .map(line => line.trim()) // Удаляем лишние пробелы вокруг каждого элемента
   .filter(line => line !== '') // Убираем пустые строки (если они есть)
   .map(line => `<li class="popup__musclels-master popup__musclels-item">${line}</li>`) // Оборачиваем каждый элемент в <li>
-  .join('') : 'no information'; // Склеиваем всё в одну строку без разделителей
+  .join('') : ''; // Склеиваем всё в одну строку без разделителей
   
   popupMusclelsSlave.innerHTML = slave ? slave
   .split(',') 
   .map(line => line.trim())
   .filter(line => line !== '') 
   .map(line => `<li class="popup__musclels-slavee popup__musclels-item">${line}</li>`) 
-  .join('') : 'no information'; 
+  .join('') : ''; 
 }
 
-// Обработчик кликов на родительский элемент карточек
 placeList.addEventListener("click", (evt) => {
-  const card = evt.target.closest(".page_exercise__places__item"); // Находим ближайший элемент карточки
-  if (card) {
-    // Если кликнули на карточку
-    const elementImage = card.querySelector(".page_exercise_section_description__image");
-    const elementTitle = card.querySelector(".page_exercise_section_description__title");
-    const elementSubtitle = card.querySelector(".page_xercise_section_description__subtitle");
-    const elementDescription = card.querySelector(".page_exercise_section_description__paragraph");
-    
-    // Получаем данные из карточки
-    const cardData = initialCards.find(item => item.title === elementTitle.textContent);
+  // Проверяем, был ли клик на кнопке "Подробнее"
+  if (evt.target.classList.contains("page_exercise_section__description_button")) {
+    // Находим ближайшую карточку, в которой находится кнопка
+    const card = evt.target.closest(".page_exercise__places__item");
 
-    // Открываем попап с данными карточки
-    openCardPopup(
-      elementImage,
-      elementTitle,
-      elementSubtitle,
-      elementDescription,
-      cardData.equipment,
-      cardData.about,
-      cardData.musclelsMaster,
-      cardData.musclelsSlave
-    );
+    if (card) {
+      // Находим элементы внутри карточки
+      const elementImage = card.querySelector(".page_exercise_section_description__image");
+      const elementTitle = card.querySelector(".page_exercise_section_description__title");
+      const elementSubtitle = card.querySelector(".page_xercise_section_description__subtitle");
+      const elementDescription = card.querySelector(".page_exercise_section_description__paragraph");
+
+      // Получаем данные из карточки
+      const cardData = initialCards.find(item => item.title === elementTitle.textContent);
+
+      // Открываем попап с данными карточки
+      openCardPopup(
+        elementImage,
+        elementTitle,
+        elementSubtitle,
+        elementDescription,
+        cardData.equipment,
+        cardData.about,
+        cardData.musclelsMaster,
+        cardData.musclelsSlave
+      );
+    }
   }
 });
 
