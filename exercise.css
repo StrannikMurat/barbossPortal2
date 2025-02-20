@@ -35,4 +35,4 @@
 .popup{align-items:center;background-color:rgba(0,0,0,.7);bottom:0;display:none;justify-content:center;left:0;position:fixed;right:0;top:0;z-index:10}.popup__content{background-image:url(5f4c634297f36d61890b.png);display:flex;flex-direction:column;gap:10px;max-height:100%;max-width:470px;overflow-y:auto;width:100%}
 .popup_is-animated{display:flex;opacity:0;pointer-events:none;transition:visibility 0s .6s,opacity .6s;-webkit-user-select:none;-moz-user-select:none;user-select:none;visibility:hidden}
 .popup_is-opened{display:flex;opacity:1;pointer-events:all;transition:visibility 0s,opacity .6s;visibility:visible}
-
+.no-active{filter:blur(5px);pointer-events:stroke}
