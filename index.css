@@ -1,5 +1,5 @@
 .main__button_item{align-items:center;background-color:#f5f5f5;border-left:20px solid #363636;border-radius:15px;box-shadow:0 0 5px 0 rgba(0,0,0,.68);cursor:pointer;display:flex;height:164px;width:164px}.main__button_item:hover{border-left:20px solid #ffbd16}.main__button{font-size:20px;font-weight:700;text-align:center}@media (max-width:450px){.main__button{font-size:10px}.main__button_item{height:130px;width:130px}}
-.main__button_list{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}.main{margin-top:auto}.no-active{filter:blur(5px);pointer-events:none}.main__button{font-family:Roboto,sans-serif;font-size:20px;font-weight:600}
+.main__button_list{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}.main{margin-top:auto}.no-active{filter:blur(5px);pointer-events:none}.main__button{font-family:Roboto,sans-serif;font-size:20px;font-weight:600}@media (max-width:450px){.main__button{font-size:16px}}
 .header__logo{height:100%;-o-object-fit:contain;object-fit:contain;width:100%}.header__logo_box{max-width:100px}
 .header__title_line{background-color:#828282;height:2px;width:90%}
 .header__subtitle{font-size:14px;text-align:end;width:90%}
